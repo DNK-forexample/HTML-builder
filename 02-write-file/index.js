@@ -15,8 +15,5 @@
    });
    
    process.on('exit', () => stdout.write('You are out of input mode'));
-   process.on('SIGINT', () => {
-    process.stdout.write('You are out of input mode')
-    process.exit();
-  })
+   process.on('SIGINT', () => process.exit());
    
